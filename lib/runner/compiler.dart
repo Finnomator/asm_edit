@@ -43,7 +43,7 @@ class Compiler {
     }
 
     if (splited.length < 2) {
-      throw CompileException(0, splited[0].length, "No Argument", lineIdx);
+      throw CompileException(splited[0].length, splited[0].length, "No Argument", lineIdx);
     }
 
     final int? parsedArgument = int.tryParse(splited[1]);

@@ -11,16 +11,13 @@ class CompileErrorsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text("Compile Errors:"),
+        const Text("Compile Errors", style: TextStyle(fontSize: 20)),
         for (final CompileException ex in exceptions) ...[
-          SizedBox(
-            width: 500,
-            child: ListTile(
-              title: Text("(${ex.line}; ${ex.start}) ${ex.reason}"),
-              leading: const Icon(Icons.error, color: Colors.red),
-            ),
+          ListTile(
+            title: Text("(${ex.line}; ${ex.start}) ${ex.reason}"),
+            leading: const Icon(Icons.error, color: Colors.red),
           ),
-          const Divider(),
+          if (ex != exceptions.last) const Divider(height: 0),
         ],
       ],
     );

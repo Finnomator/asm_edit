@@ -1,6 +1,7 @@
 import 'package:asm_edit/constants.dart';
-import 'package:asm_edit/memory_viewer/memory_viewer.dart';
 import 'package:asm_edit/runner/compiler.dart';
+
+import '../computer_viewer/memory_viewer.dart';
 
 class Computer {
   int akkumulator = 0;

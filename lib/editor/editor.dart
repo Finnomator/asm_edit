@@ -21,6 +21,9 @@ class _EditorWidgetState extends State<EditorWidget> {
             maxLines: null,
             controller: textCtrler,
             style: const TextStyle(fontFamily: "Cascadia Code", fontSize: 12),
+            decoration: const InputDecoration(
+              hintText: "Type here...",
+            ),
           ),
         ),
       ],
